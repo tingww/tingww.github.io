@@ -36,34 +36,75 @@
 								</header>
 
 								<!-- Content -->
-									<h2 id="content">Sample Content</h2>
-									<p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.</p>
+									<h2 id="content">Introduction</h2>
+									<p>This project is aimed to build a device that can record 
+										voluntary EMG signal using surface electrode. The recorded
+										 analog signal is converted into digital signal and then 
+										 sent to a phone via wireless communication.</p>
+									<h2>Tools used in this project</h2>
 									<div class="row">
 										<div class="col-6 col-12-small">
-											<h3>Sem turpis amet semper</h3>
-											<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac. Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+											<h3>Hardware</h3>
+														<ul>
+															<li>Instrumental amplifier INA128</li>
+															<li>Multiple LM358 OP amp</li>
+															<li>External ADC MCP3008</li>
+															<li>18650 Lithium ion battery</li>
+															<li>ESP-32 development board</li>
+															<li>Multiple 100, 1K, 2.4K, 4.7K, 5.1K, 10K, 10M ohm resistors</li>
+															<li>Multiple 68nf, 10uf, 100uf capacitors</li>
+															<li>Dupont wires</li>
+															<li>Electrodes and connectors</li>
+															<li>ELVIS II for comparison</li>
+														</ul>
 										</div>
 										<div class="col-6 col-12-small">
-											<h3>Magna odio tempus commodo</h3>
-											<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur lacus ac interdum morbi accumsan vis mi accumsan.</p>
-										</div>
-										<!-- Break -->
-										<div class="col-4 col-12-medium">
-											<h3>Interdum sapien gravida</h3>
-											<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
-										</div>
-										<div class="col-4 col-12-medium">
-											<h3>Faucibus consequat lorem</h3>
-											<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
-										</div>
-										<div class="col-4 col-12-medium">
-											<h3>Accumsan montes viverra</h3>
-											<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
-										</div>
+											<h3>Software</h3>
+													<ul>
+														<li>TINA-TI for simulation</li>
+														<li>LabView for comparison</li>
+														<li>VScode and platformIO for programming</li>
+														<li>python for flashing microcontroller</li>
+													</ul>
+										</div>										
+										<!-- Break -->					
+										<h3>Considerations</h3>
+										<p>The choices of hardware and software above is made based on price, accessibility and functionality. Learn more on the
+										discussion part for more detail.										
+										</p>
+										
 									</div>
-
+									<h2>Design flow:</h2>
+									<ul>
+										<li>Obtain background knowledge &ndash; 2019/9-11<br />Including general idea of how to obtain bio signals, muscle
+											physiology, web server, html markup language, esp8266.</li>
+									</ul>
+									<ul>
+										<li>Conduct experiments &ndash; 2019/11-2020/1<br />Including experiments design and how to approach this problem.
+										</li>
+									</ul>
+									<ul>
+										<li>Building prototypes &ndash; 2020/2</li>
+										<li>Debug and assembly &ndash; 2020/2-4</li>
+									</ul>
+									<h2><strong>Background knowledge:</strong></h2>
+									<ol>
+										<li>EMG &ndash; electromyography</li>
+									</ol>
+									<p>EMG is a technique for evaluating and recording electrical activity created by skeletal muscle. Electric potential is
+										generated by the skeletal muscle fiber membrane.</p>
+									<ol start="2">
+										<li>Motor unit</li>
+									</ol>
+									<img src="images/MotorUnit2.png" alt="" />
+									<p>Fig 1. A schematic representation of basic motor control mechanisms and of the motor unit and its components.</p>
+									<p>A motor unit (MU) consists of an &alpha;-motoneuron in the spinal cord and the muscle fibers it innervates. The net
+										membrane current induced in this motoneuron by the various synaptic innervation sites determines the discharge
+										(firing) pattern of the motor unit and thus the activity of the MU.&nbsp;&nbsp;&nbsp;&nbsp; The number of MUs per
+										muscle in humans may range from about 100 for a small hand muscle to 1000 or more for large limb muscles and the
+										difference in force generated varies greatly from muscle to muscle.</p>
 								<hr class="major" />
-
+								
 								<!-- Elements -->
 									<h2 id="elements">Elements</h2>
 									<div class="row gtr-200">
